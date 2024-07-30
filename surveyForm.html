@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey - Satu</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Minna Ahonen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Satu_tyyli.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="satu.js"></script>
+    </head>
+    <body>
+        <a class="screenreader" href="#maincontent">Skip to main content</a>
+        <header class="sticky_nav">
+            <h1 class="small_logo" aria-disabled="true" aria-expanded="false" class="disabled_link">Satu</h1>
+            <nav aria-labelledby="navheader" id="nav">
+                <h2 id="navheader" class="visually_hidden">Navigation</h2>
+                <button id="menu_button" aria-haspopup="menu" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
+                    <span class="visually_hidden">Menu</span>
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </button>
+                <ul class="nav_main" id="nav_main">
+                    <li><a href="index.html" id="focus" tabindex="0">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex_container" id="maincontent">
+            <div class="alt_left">
+                <div class="alt_left_content">
+                    <header class="main_header">
+                        <h1 class="page_header">Survey</h1>
+                        <date>10 - 31 July, 2024</date>
+                    </header>
+                    <p>To prepare for our 5th anniversary, we will be conducting a customer survey. Three of the participants will win a 50-euro gift card to Satu. Help us plan a better celebration with our community than ever before!</p>
+                </div>
+            </div>
+            <div class="alt_right">
+                <div class="alt_right_content">
+                    <h2>Fill out the survey and win a gift card to Satu!</h2>
+                    <p>Fill out the form below between July 22 and August 12 for a chance to win a 50 euro gift card. The winners will be drawn on August 13, and will the contacted personally.</p>
+                    <p>By taking part in the contest you agree to its terms and conditions, which can be read <a href="#">here</a>.</p>
+                    <p>Required fields are marked with an asterisk *</p>
+                    <form aria-labelledby="form_label" name="raffle" id="raffle" method="post" onsubmit="submitSurvey()">
+                        <h3 id="form_label">Customer survey</h3>
+                        <fieldset id="personal">
+                            <legend>Personal details:</legend>
+                            <div>
+                                <label for="fname">First name: *</label>
+                                <input type="text" id="fname" name="fname" required="true">
+                            </div>
+                            <div>
+                                <label for="lname">Last name: *</label>
+                                <input type="text" id="lname" name="lname" required="true">
+                            </div>
+                            <div>
+                                <label for="email">Email: *</label>
+                                <input type="email" id="email" name="email" required="true">
+                            </div>
+                        </fieldset>
+                        <fieldset id="genres" aria-labelledby="genre_label">
+                            <legend>Favourite genre:</legend>
+                            <label id="genre_label" for="genres">You can choose multiple favourite genres.</label>
+                            <div>
+                                <input type="checkbox" id="fantasy" name="fantasy" value="Fantasy">
+                                <label for="fantasy">Fantasy</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="mystery" name="mystery" value="Mystery">
+                                <label for="mystery">Mystery</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="Science fiction" name="Science fiction" value="Science fiction">
+                                <label for="Science fiction">Science fiction</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="romance" name="romance" value="Romance">
+                                <label for="romance">Romance</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="classics" name="classics" value="Classics">
+                                <label for="classics">Classics</label>
+                            </div>
+                        </fieldset>
+                        <section>
+                            <label for="most_liked">What do you like most about Satu: </label>
+                            <select name="most_liked" id="most_liked">
+                                <option value="bookstore">Bookstore</option>
+                                <option value="cafe">Cafe</option>
+                                <option value="events">Events</option>
+                                <option value="all">All of the above</option>
+                            </select>
+                        </section>
+                        <section>
+                            <input aria-selected="false" type="checkbox" id="consent" name="consent" required="true">
+                            <label for="consent">I have read and understood the terms and conditions *</label>
+                        </section>
+                        <button id="submit" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="footer_content" aria-labelledby="footerheader">
+            <h2 id="footerheader" class="visually_hidden">Footer</h2>
+                <p class="section_header">Bookstore and cafe Satu</p>
+                <div class="footer_flex">
+                    <section>
+                        <h3>Address</h3>
+                        <address>
+                            <p>Lumikinkatu 4</p>
+                            <p>00140 Helsinki</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Contact</h3>
+                        <address>
+                            <p>info@satu.net</p>
+                            <p>+358 44 123 4567</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Open</h3>
+                        <p>Monday to Friday 10 - 17</p>
+                        <p>Saturday 10 - 15</p>
+                    </section>
+                </div>
+        </footer>
+    </body>
+</html>

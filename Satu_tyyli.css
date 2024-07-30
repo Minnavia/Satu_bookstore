@@ -1,0 +1,618 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky_nav a:focus {
+    outline: 2px solid blue;
+    text-decoration: underline;
+}
+
+.screenreader {
+    position: absolute;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+}
+
+.screenreader:focus {
+    left: 5px;
+    top: 5px;
+    width: 180px;
+    height: 20px;
+    z-index: 999;
+    margin: auto;
+}
+
+.visually_hidden {
+    position: absolute;
+    left:     -10000px;
+    top:      auto;
+    width:    1px;
+    height:   1px;
+    overflow: hidden;
+}
+
+.disabled_link {
+    pointer-events: none;
+    text-decoration: underline;
+    text-decoration-color: #d75b5b;
+    background-color: rgb(248, 248, 244);
+    color: black;
+}
+
+/*index*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    line-height: 1.5;
+}
+
+address {
+    font-style: normal;
+}
+
+.sticky_nav {
+    display: flex;
+    top: 0px;
+    font-size: 0.9rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 13%;
+    background-color: #201512;
+    color: white;
+    width: 100%;
+    position: sticky;
+    z-index: 1;
+    height: 60px;
+}
+
+.nav_main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 60px;
+    width: 67.8vw;
+    right: 0px;
+}
+
+.menu_icon {
+    display: none;
+}
+
+.nav_main > li {
+    float: left;
+    height: 100%
+}
+
+li > a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%
+}
+
+li > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px 0px;
+    height: 100%;
+    outline-offset: -4px;
+}
+
+.main_header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    line-height: 0.8;
+    padding-bottom: 20px;
+}
+
+.logo {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 5.5rem;
+    font-weight: lighter;
+    outline-offset: -4px;
+}
+
+.section_header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #d75b5b;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.secondary_header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+.content_header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.content_header > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+#main_page_title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 29px;
+    line-height: 1.7;
+}
+
+.flex_container {
+    display: flex;
+}
+
+.left_wrapper {
+    background-image: url(book_background.jpg);
+    background-size: auto, cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 60%;
+    flex: 0 auto;
+    position: sticky;
+    top: 0px;
+}
+
+.left_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 550px;
+    gap: 10px;
+    padding-left: 12vw;
+    padding-right: 5vw;
+    padding-bottom: 40px;
+    position: sticky;
+    top: 60px;
+    color: white;
+}
+
+.right_wrapper {
+    background-color: rgb(248, 248, 244);
+    width: 40%;
+    height: 100%;
+    flex: 0 auto;
+}
+
+.right_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    padding-right: 7vw;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    color: rgb(21, 21, 21);
+}
+
+.tapahtumat_flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tapahtumat_flex > section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+footer h3 {
+    padding-bottom: 10px;
+}
+
+.footer_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-left: 12vw;
+    padding-bottom: 40px;
+    gap: 20px;
+    color: rgb(21, 21, 21);
+    background-color: white
+}
+
+.footer_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    max-width: 900px;
+}
+
+.footer_flex > * {
+    flex: 1;
+    min-width: 50px;
+}
+
+/*Muut sivut*/
+
+.small_logo {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+}
+
+.alt_left {
+    background-image: url(book_background.jpg);
+    background-size: auto, cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 40%;
+    flex: 0 auto;
+    position: sticky;
+    top: 0px;
+}
+
+.alt_left_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 550px;
+    gap: 10px;
+    padding-left: 12vw;
+    padding-right: 5vw;
+    padding-bottom: 40px;
+    position: sticky;
+    top: 60px;
+    color: white;
+}
+
+.alt_right {
+    background-color: rgb(248, 248, 244);
+    width: 60%;
+    height: 100%;
+    flex: 0 auto;
+    display: flex;
+}
+
+.alt_right_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    padding-right: 7vw;
+    padding-left: 100px;
+    padding-bottom: 40px;
+    color: rgb(21, 21, 21);
+    width: 100%;
+}
+
+html {
+    background-color: rgb(248, 248, 244);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page_header {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 5.5rem;
+    font-weight: lighter;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.menu_sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 270px;
+    max-width: 300px
+}
+
+.menu_sections > * {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu_sections h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu_sections ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.menu_sections li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tapahtumat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.tapahtumat > * {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    width: 80%;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #d75b5b;
+}
+
+fieldset > * {
+    padding: 10px 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#personal {
+    display: flex;
+    gap: 10px;
+}
+
+#personal > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#genres {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+}
+
+input[type="text"] {
+    font-size: 16px;
+}
+
+form > section {
+    padding: 10px 0px;
+}
+
+select {
+    font-size: 16px;
+    padding: 2px 2px;
+}
+
+#submit {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 17px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#submit:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .left_content {
+        padding-right: 90px;
+    }
+    
+    .right_content {
+        padding-right: 50px;
+    }
+
+    .footer_content {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .page_header {
+        font-size: 4rem;
+    }
+
+    .sticky_nav {
+        padding-left: 8%;
+    }
+
+    .main_header h2 {
+        font-size: 2.5rem;
+    }
+
+    .flex_container {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .left_wrapper {
+        position: static;
+        height: min-content;
+        width: 100%;
+        height: 100%;
+    }
+
+    .left_content {
+        justify-content: flex-start;
+        min-width: 0;
+        height: 100%;
+        padding-right: 40px;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+    .right_wrapper {
+        width: 100%;
+    }
+
+    .right_content {
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+    .alt_left {
+        position: static;
+        height: min-content;
+        width: 100%;
+        height: 100%;
+    }
+
+    .alt_left_content {
+        justify-content: flex-start;
+        min-width: 0;
+        height: 100%;
+        padding-right: 40px;
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+    .alt_right {
+        width: 100%;
+    }
+
+    .alt_right_content {
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer_content {
+        padding-left: 40px;
+    }
+
+    .footer_flex > section > h3 {
+        font-size: 1rem;
+    }
+
+    /*muut sivut*/
+
+    .menu {
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .menu_icon {
+        display: block;
+        background-color: #201512;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .sticky_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        position: sticky;
+        top: 0px;
+        gap: 5px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        background-color:#201512;
+        color: white;
+        height: fit-content;
+    }
+
+    .nav_main {
+        display: none;
+    }
+
+    .nav_main.responsive {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 0px;
+        width: 100vw;
+        flex-direction: column;
+        height: fit-content;
+        background-color: #201512;
+    }
+
+    li > a {
+        display: block;
+        color: white;
+        width: 100vw;
+        text-decoration: none;
+        padding: 10px 25px 10px;
+        height: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}

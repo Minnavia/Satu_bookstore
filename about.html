@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About us - Satu</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Minna Ahonen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Satu_tyyli.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="satu.js"></script>
+    </head>
+    <body>
+        <a class="screenreader" href="#maincontent">Skip to main content</a>
+        <header class="sticky_nav">
+            <h1 class="small_logo" href="index.html">Satu</h1>
+            <nav aria-labelledby="navheader" id="nav">
+                <h2 id="navheader" class="visually_hidden">Navigation</h2>
+                <button id="menu_button" aria-haspopup="menu" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
+                    <span class="visually_hidden">Menu</span>
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </button>
+                <ul class="nav_main" id="nav_main">
+                    <li><a href="index.html" id="focus" tabindex="0">Home</a></li>
+                    <li><a href="about.html" aria-current="page" aria-disabled="true" tabindex="-1" class="disabled_link">About us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex_container" id="maincontent">
+            <div class="alt_left">
+                <div class="alt_left_content">
+                    <header class="main_header">
+                        <h1 class="page_header">About us</h1>
+                    </header>
+                    <p>
+                        Satu is a reader's haven in the middle of Helsinki. Here you can enjoy delicious treats as you browse our collection. You might even find new bookish friends through our events. Welcome!
+                    </p>
+                </div>
+            </div>
+            <div class="alt_right">
+                <div class="alt_right_content">
+                    <img src="sisters.jpg" alt="The two sisters who founded Satu smile at each other while holding books in a wintry landscape.">
+                    
+                    <p>Satu was founded by two sisters from Kotka. They had always been close and had similar interests in books. Starting a book store together came naturally. Their respective degrees in library management and information technology helped their business succeed. Neither had any experience with entrepreneurship, but passion and hard work has taken them far.</p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer_content" aria-labelledby="footerheader">
+            <h2 id="footerheader" class="visually_hidden">Footer</h2>
+                <p class="section_header">Bookstore and cafe Satu</p>
+                <div class="footer_flex">
+                    <section>
+                        <h3>Address</h3>
+                        <address>
+                            <p>Lumikinkatu 4</p>
+                            <p>00140 Helsinki</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Contact</h3>
+                        <address>
+                            <p>info@satu.net</p>
+                            <p>+358 44 123 4567</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Open</h3>
+                        <p>Monday to Friday 10 - 17</p>
+                        <p>Saturday 10 - 15</p>
+                    </section>
+                </div>
+        </footer>
+    </body>
+</html>

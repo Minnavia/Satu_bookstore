@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Menu - Satu</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Minna Ahonen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Satu_tyyli.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="satu.js"></script>
+    </head>
+    <body>
+        <a class="screenreader" href="#maincontent">Skip to main content</a>
+        <header class="sticky_nav">
+            <h1 class="small_logo" aria-disabled="true" aria-expanded="false" class="disabled_link">Satu</h1>
+            <nav aria-labelledby="navheader" id="nav">
+                <h2 id="navheader" class="visually_hidden">Navigation</h2>
+                <button id="menu_button" aria-haspopup="menu" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
+                    <span class="visually_hidden">Menu</span>
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </button>
+                <ul class="nav_main" id="nav_main">
+                    <li><a href="index.html" id="focus" tabindex="0">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="menu.html" aria-current="page" aria-disabled="true" tabindex="-1" class="disabled_link">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex_container" id="maincontent">
+            <div class="alt_left">
+                <header class="alt_left_content">
+                    <h1 class="page_header">Menu</h1>
+                    <p>Our cafe offers you a wide selection of treats both sweet and savoury. We source the best coffee beans and grind them fresh for you.</p>
+                </header>
+            </div>
+            <div class="alt_right">
+                <div class="alt_right_content">
+                    <div class="menu">
+                    <section class="menu_sections">
+                        <section>
+                            <h3 class="section_header">Coffees</h3>
+                            <ul>
+                                <li>Coffee<span class="price">2.10 €</span></li>
+                                <li>Espresso<span class="price">3.10 €</span></li>
+                                <li>Cappuccino<span class="price">4.20 €</span></li>
+                                <li>Caffé latte<span class="price">4.00 €</span></li>
+                                <li>Americano<span class="price">4.10 €</span></li>
+                                <li>Caffé mocha<span class="price">4.90 €</span></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 class="section_header">Teas</h3>
+                            <ul>
+                                <li>Earl Grey<span class="price">3.90 €</span></li>
+                                <li>Assam<span class="price">3.90 €</span></li>
+                                <li>Japanese green tea<span class="price">3.90 €</span></li>
+                                <li>White tea<span class="price">4.10 €</span></li>
+                                <li>Mint<span class="price">2.50 €</span></li>
+                                <li>Oolong<span class="price">3.90 €</span></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 class="section_header">Cold drinks</h3>
+                            <ul>
+                                <li>Fresh orange juice<span class="price">2.50 €</span></li>
+                                <li>Artisan lemonades<span class="price">3.00 €</span></li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section class="menu_sections">
+                        <section>
+                            <h3 class="section_header">Sweet</h3>
+                            <ul>
+                                <li>Blueberry muffin<span class="price">2.50 €</span></li>
+                                <li>Cinnamon roll<span class="price">4.30 €</span></li>
+                                <li>Spiced pumpkin cake<span class="price">5.50 €</span></li>
+                                <li>Cheese cake<span class="price">6.30 €</span></li>
+                                <li>Lemon meringue cake<span class="price">6.30 €</span></li>
+                                <li>Marble cake<span class="price">8.40€</span></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3 class="section_header">Savoury</h3>
+                            <ul>
+                                <li>Caesar salad<span class="price">15.30 €</span></li>
+                                <li>Goat cheese salad<span class="price">15.30 €</span></li>
+                                <li>Smoked salmon bread<span class="price">4.90 €</span></li>
+                                <li>Filled croissant<span class="price">4.00 €</span></li>
+                            </ul>
+                        </section>
+                    </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer_content" aria-labelledby="footerheader">
+            <h2 id="footerheader" class="visually_hidden">Footer</h2>
+                <p class="section_header">Bookstore and cafe Satu</p>
+                <div class="footer_flex">
+                    <section>
+                        <h3>Address</h3>
+                        <address>
+                            <p>Lumikinkatu 4</p>
+                            <p>00140 Helsinki</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Contact</h3>
+                        <address>
+                            <p>info@satu.net</p>
+                            <p>+358 44 123 4567</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Open</h3>
+                        <p>Monday to Friday 10 - 17</p>
+                        <p>Saturday 10 - 15</p>
+                    </section>
+                </div>
+        </footer>
+    </body>
+</html>

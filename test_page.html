@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Satu</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Minna Ahonen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Satu_tyyli.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="topnav wrapper">
+            <h1><a href="/">Cats in Space</a></h1>
+            <nav>
+              <span id="nav-label" hidden>Navigation</span>
+              <button
+                id="btnOpen"
+                class="topnav__open"
+                aria-expanded="false"
+                aria-labelledby="nav-label"
+              >
+                <img src="/img/hamburger.svg" alt="" width="40" height="24" />
+              </button>
+              <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+                <button class="topnav__close" id="btnClose" aria-label="Close">
+                  <img src="/img/close.svg" alt="" width="28" height="27" />
+                </button>
+                <ul class="topnav__links">
+                  <li class="topnav__item">
+                    <a href="" class="topnav__link">Nyancat</a>
+                  </li>
+                  <li class="topnav__item">
+                    <a href="" class="topnav__link">Catra</a>
+                  </li>
+                  <li class="topnav__item">
+                    <a href="" class="topnav__link">Garfield</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+        <div class="flex_container">
+            <div class="alt_left">
+                <div class="alt_left_content">
+                    <a class="screenreader" href="#maincontent">Skip to main content</a>
+                    <header class="main_header">
+                        <h1 class="logo">About us</h1>
+                    </header>
+                    <p>
+                        Satu is a reader's haven in the middle of Helsinki. Here you can enjoy delicious treats as you browse our collection. You might even find new bookish friends through our events. Welcome!
+                    </p>
+                    
+                </div>
+            </div>
+            <main class="alt_right">
+                    <div class="alt_right_content">
+                        <section class="menu_sections">
+                            <section>
+                                <h3 class="section_header">Kahvit</h3>
+                                <ul>
+                                    <li>Talon kahvi<span class="price">3.10 €</span></li>
+                                    <li>Espresso<span class="price">3.10 €</span></li>
+                                    <li>Cappuccino<span class="price">4.20 €</span></li>
+                                    <li>Caffé Latte<span class="price">4.00 €</span></li>
+                                    <li>Americano<span class="price">4.10 €</span></li>
+                                    <li>Caffé mocha<span class="price">4.90 €</span></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3 class="section_header">Teet</h3>
+                                <ul>
+                                    <li>Earl Grey<span class="price">3.90 €</span></li>
+                                    <li>Assam<span class="price">3.90 €</span></li>
+                                    <li>Vihreä tee<span class="price">3.90 €</span></li>
+                                    <li>Valkoinen tee<span class="price">4.10 €</span></li>
+                                    <li>Minttu<span class="price">2.50 €</span></li>
+                                    <li>Rooibos<span class="price">3.90 €</span></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3 class="section_header">Kylmät juomat</h3>
+                                <ul>
+                                    <li>Appelsiinimehu<span class="price">2.50 €</span></li>
+                                    <li>Artesaanilimonaadit<span class="price">3.00 €</span></li>
+                                </ul>
+                            </section>
+                        </section>
+                        <section class="menu_sections">
+                            <section>
+                                <h3 class="section_header">Makeaa</h3>
+                                <ul>
+                                    <li>Mustikkamuffinssi<span class="price">2.50 €</span></li>
+                                    <li>Korvapuusti<span class="price">4.30 €</span></li>
+                                    <li>Maustettu kurpitsakakku<span class="price">5.50 €</span></li>
+                                    <li>Juustokakku<span class="price">6.30 €</span></li>
+                                    <li>Sitruuna-marenkitorttu<span class="price">6.30 €</span></li>
+                                    <li>Marmori-suklaakakku<span class="price">8.40€</span></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h3 class="section_header">Suolaista</h3>
+                                <ul>
+                                    <li>Kana-caesarsalaatti<span class="price">15.30 €</span></li>
+                                    <li>Vuohenjuustosalaatti<span class="price">15.30 €</span></li>
+                                    <li>Savulohileipä<span class="price">4.90 €</span></li>
+                                    <li>Täytetty croissant<span class="price">4.00 €</span></li>
+                                    <li>Sadun sämpylä<span class="price">3.90 €</span></li>
+                                </ul>
+                            </section>
+                        </section>
+                    </div>
+            </main>
+        </div>
+        <footer class="footer_content">
+                <h2 class="section_header">Kirjakauppa ja kahvila Satu</h2>
+                <div class="footer_flex">
+                    <section>
+                        <h3>Osoite</h3>
+                        <address>
+                            <p>Lumikinkatu 4</p>
+                            <p>00140 Helsinki</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Yhteystiedot</h3>
+                        <address>
+                            <p>info@satu.net</p>
+                            <p>+358 44 123 4567</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Avoinna</h3>
+                        <p>MA-PE 10-17</p>
+                        <p>LA 10-15</p>
+                    </section>
+                    <nav class="nav_footer">
+                        <h3>SATU.NET</h3>
+                        <ul>
+                            <li><a href="index.html">Kotisivu</a></li>
+                            <li><a href="esittely.html">Esittely</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="tapahtumat.html">Tapahtumat</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </footer>
+    </body>
+</html>
