@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Accessibility - Satu</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Minna Ahonen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Satu_style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="satu.js"></script>
+    </head>
+    <body>
+        <a class="screenreader" href="#maincontent">Skip to main content</a>
+        <header class="sticky_nav">
+            <p><a href="index.html" class="small_logo">Satu</a></p>
+            <nav aria-labelledby="navheader" id="nav">
+                <h2 id="navheader" class="visually_hidden">Navigation</h2>
+                <button id="menu_button" aria-haspopup="menu" aria-expanded="false" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
+                    <span class="visually_hidden">Menu</span>
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </button>
+                <ul class="nav_main" id="nav_main">
+                    <li><a href="index.html" id="focus" tabindex="0">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="flex_container" id="maincontent">
+            <div class="alt_left">
+                <header class="alt_left_content">
+                    <h1 class="page_header" id="accessibility_page_header">Accessibility</h1>
+					<p>We take our commitment to our customers very seriously. We do our best this shows in our accessibility measures. Find out more in our statement.</p>
+                </header>
+            </div>
+            <div class="alt_right">
+                <div class="alt_right_content" id="accessibility_statement">
+                    <h2>Accessibility Statement for <span class="basic-information website-name">Satu</span></h2>
+					<p>
+						This is an accessibility statement from <span class="basic-information organization-name">Satu Bookstore Oy</span>.
+					</p>
+					<h3>Measures to support accessibility</h3>
+					<p>
+						<span class="basic-information organization-name">Satu Bookstore Oy</span>
+						takes the following measures to ensure accessibility of
+						<span class="basic-information website-name">Satu</span>:
+					</p>
+					<ul class="organizational-effort accessibility-measures">
+						<li>Include accessibility as part of our mission statement.</li>
+						<li>Include accessibility throughout our internal policies.</li>
+						<li>Integrate accessibility into our procurement practices.</li>
+						<li>Provide continual accessibility training for our staff.</li>
+						<li>Assign clear accessibility goals and responsibilities.</li>
+					</ul>
+					<h3>Conformance status</h3>
+					<p>
+						The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a> defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA.
+						<span class="basic-information website-name">Satu</span>
+						is
+						<span class="basic-information conformance-status" data-printfilter="lowercase">partially conformant</span>
+						with
+						<span class="basic-information conformance-standard"><span data-negate="">WCAG 2.1 level AA</span>.</span>
+						<span>
+						<span class="basic-information conformance-status">Partially conformant</span>
+						means that
+						<span class="basic-information conformance-meaning">some parts of the content do not fully conform to the accessibility standard</span>.
+					</span>
+					</p>
+					<h4>Additional accessibility considerations</h4>
+					<p class="basic-information conformance-additions">Although our goal is WCAG 2.1 Level AA conformance, we have also applied some Level AAA Success Criteria: No component flashes more than three times in any one second period. Web content does not restrict use of input modalities available on a platform. Information about the user's location within a set of Web pages is available. All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.</p>
+					<h3>Feedback</h3>
+					<p>
+						We welcome your feedback on the accessibility of
+						<span class="basic-information website-name">Satu</span>.
+						Please let us know if you encounter accessibility barriers on
+						<span class="basic-information website-name">Satu</span>:
+					</p>
+					<ul class="basic-information feedback h-card">
+						<li>
+						Phone:
+						<span class="phone-number p-tel">+358 1234567899</span>
+					</li>
+						<li>
+						E-mail:
+						<a class="email u-email" href="mailto:accessibility@satu.comaccessibility@satu.comaccessibility@satu.com">accessibility@satu.com</a>
+					</li>
+						<li>
+						Visitor Address:
+						<span class="visitor-address p-extended-address">Lumikinkatu 4, 00140 Helsinki</span>
+					</li>
+						<li>
+						Postal Address:
+						<span class="postal-address p-adr">Lumikinkatu 4, 00140 Helsinki</span>
+					</li>
+						<li class="contact-other p-note">Twitter: @bookSatu</li>
+					</ul>
+					<p>
+						We try to respond to feedback within <span class="feedback responsetime">2 business days</span>.
+					</p>
+					<h3>Compatibility with browsers and assistive technology</h3>
+					<p>
+						<span class="basic-information website-name">Satu</span>
+						is designed to be compatible with the following assistive technologies:
+					</p>
+					<ul class="technical-information compatible-environments">
+						<li>Browser Firefox with assistive technology NVDA on operating system Windows 11</li>
+						<li>Browser Chrome with assistive technology NVDA on operating system Windows 11</li>
+						<li>Browser Firefox with assistive technology Narrator on operating system Windows 11</li>
+						<li>Browser Chrome with assistive technology Narrator on operating system Windows 11</li>
+					</ul>
+					<p>
+						<span class="basic-information website-name">Satu</span>
+						is not compatible with:
+					</p>
+					<ul class="technical-information incompatible-environments">
+						<li>Browsers older than 3 major versions</li>
+					</ul>
+					<h3>Technical specifications</h3>
+					<p>
+						Accessibility of
+						<span class="basic-information website-name">Satu</span>
+						relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:
+					</p>
+					<ul class="technical-information technologies-used">
+						<li>HTML</li>
+						<li>WAI-ARIA</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+					</ul>
+					<p>These technologies are relied upon for conformance with the accessibility standards used.</p>
+					<h3>Limitations and alternatives</h3>
+					<p>
+						Despite our best efforts to ensure accessibility of
+						<span class="basic-information website-name">Satu</span> , there may be some limitations. Below is a description of known limitations, and potential solutions. Please contact us if you observe an issue not listed below.
+					</p>
+					<p>
+						Known limitations for
+						<span class="basic-information website-name">Satu</span>:
+					</p>
+					<ol class="technical-information accessibility-limitations">
+						<li><strong>Form error identification</strong>: Screen reader may not identify errors made in input fields because We do not provide custom validation scripts, but rely on browser's HTML5 support. We also accept verbal submissions by phone and can provide physical forms on premises. Please call us if you encounter an issue.</li>
+					</ol>
+					<h3>Assessment approach</h3>
+					<p>
+						<span class="basic-information organization-name">Satu Bookstore Oy</span>
+						assessed the accessibility of
+						<span class="basic-information website-name">Satu</span>
+						by the following approaches:
+					</p>
+					<ul class="technical-information assessment-approaches">
+						<li>Self-evaluation</li>
+					</ul>
+					<hr noshade="noshade">
+					<h3>Date</h3>
+					<p>
+						This statement was created on
+						<span class="basic-information statement-created-date">29 July 2024</span>
+						using the <a href="https://www.w3.org/WAI/planning/statements/">W3C Accessibility Statement Generator Tool</a>.
+					</p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer_content" aria-labelledby="footerheader">
+            <h2 id="footerheader" class="visually_hidden">Footer</h2>
+                <p class="section_header">Bookstore and cafe Satu</p>
+                <div class="footer_flex">
+                    <section>
+                        <h3>Address</h3>
+                        <address>
+                            <p>Lumikinkatu 4</p>
+                            <p>00140 Helsinki</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Contact</h3>
+                        <address>
+                            <p>info@satu.net</p>
+                            <p>+358 44 123 4567</p>
+                        </address>
+                    </section>
+                    <section>
+                        <h3>Open</h3>
+                        <p>Monday to Friday 10 - 17</p>
+                        <p>Saturday 10 - 15</p>
+                    </section>
+					<section>
+                        <h3>Company</h3>
+                        <a href="accessibility-statement_2024-06-31.html">Accessibility statement</a>
+                    </section>
+                </div>
+                </div>
+        </footer>
+    </body>
+</html>

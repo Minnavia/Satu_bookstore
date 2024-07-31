@@ -2,6 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /*
+    line-height: 1.5em;
+    word-spacing: 0.16em;
+    letter-spacing: 0.12em;
+    */
 }
 
 .sticky_nav a:focus {
@@ -38,14 +43,6 @@
     overflow: hidden;
 }
 
-.disabled_link {
-    pointer-events: none;
-    text-decoration: underline;
-    text-decoration-color: #d75b5b;
-    background-color: rgb(248, 248, 244);
-    color: black;
-}
-
 /*index*/
 
 body {
@@ -71,7 +68,6 @@ address {
     align-items: center;
     padding-left: 13%;
     background-color: #201512;
-    color: white;
     width: 100%;
     position: sticky;
     z-index: 1;
@@ -95,43 +91,45 @@ address {
 
 .nav_main > li {
     float: left;
-    height: 100%
-}
-
-li > a:hover {
-    text-decoration: underline;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     height: 100%
 }
 
-li > a {
-    display: block;
-    color: white;
+.nav_main > li > a {
     text-decoration: none;
-    padding: 15px 25px 0px;
     height: 100%;
     outline-offset: -4px;
+    padding: 15px 25px 10px 25px;
+    color: white;
 }
 
-.main_header {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    line-height: 0.8;
-    padding-bottom: 20px;
+.nav_main > li > a:hover {
+    text-decoration: underline;
+}
+
+#disabled_link {
+    pointer-events: none;
+    text-decoration: underline;
+    text-decoration-color: #d75b5b;
+    background-color: rgb(248, 248, 244);
+    color: black;
+}
+
+#disabled_logo {
+    pointer-events: none;
 }
 
 .logo {
     font-family: 'Berkshire Swash', cursive;
-    font-size: 5.5rem;
+    font-size: 5.7rem;
     font-weight: lighter;
     outline-offset: -4px;
 }
@@ -164,8 +162,10 @@ li > a {
 
 #main_page_title {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 29px;
+    font-size: 2.5rem;
+    font-weight: bolder;
     line-height: 1.7;
+    padding-bottom: 20px;
 }
 
 .flex_container {
@@ -174,6 +174,7 @@ li > a {
 
 .left_wrapper {
     background-image: url(book_background.jpg);
+    background-color: #201512;
     background-size: auto, cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -188,14 +189,14 @@ li > a {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
-    height: 550px;
-    gap: 10px;
+    height: 80vh;
     padding-left: 12vw;
     padding-right: 5vw;
     padding-bottom: 40px;
     position: sticky;
     top: 60px;
     color: white;
+    font-size: 1.2rem;
 }
 
 .right_wrapper {
@@ -270,8 +271,19 @@ footer h3 {
     text-decoration: none;
 }
 
+.page_header {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 5rem;
+    font-weight: lighter;
+}
+
+#accessibility_page_header {
+    font-size: 4rem;
+}
+
 .alt_left {
     background-image: url(book_background.jpg);
+    background-color: #201512;
     background-size: auto, cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -283,10 +295,9 @@ footer h3 {
 
 .alt_left_content {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
-    height: 550px;
+    height: 80vh;
     gap: 10px;
     padding-left: 12vw;
     padding-right: 5vw;
@@ -294,6 +305,7 @@ footer h3 {
     position: sticky;
     top: 60px;
     color: white;
+    font-size: 1.2rem;
 }
 
 .alt_right {
@@ -306,7 +318,6 @@ footer h3 {
 
 .alt_right_content {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     gap: 30px;
     padding-top: 40px;
@@ -317,6 +328,10 @@ footer h3 {
     width: 100%;
 }
 
+#accessibility_statement li {
+    margin-top: 5px;
+}
+
 html {
     background-color: rgb(248, 248, 244);
 }
@@ -324,12 +339,6 @@ html {
 img {
     max-width: 100%;
     height: auto;
-}
-
-.page_header {
-    font-family: 'Berkshire Swash', cursive;
-    font-size: 5.5rem;
-    font-weight: lighter;
 }
 
 .menu {
@@ -377,6 +386,10 @@ img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+}
+
+.tapahtumat h2 {
+    font-size: 22px;
 }
 
 .tapahtumat > * {
@@ -458,8 +471,13 @@ select {
 
 @media only screen and (max-width: 1200px) {
 
+    .page_header {
+        font-size: 3.5rem;
+    }
+
     .left_content {
         padding-right: 90px;
+        height: 100vh;
     }
     
     .right_content {
@@ -469,13 +487,23 @@ select {
     .footer_content {
         padding-left: 40px;
     }
+
+    .alt_left_content {
+        padding-left: 7vw;
+    }
+
+    .nav_main > li > a {
+        padding: 15px 25px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .page_header {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (max-width: 900px) {
-
-    .page_header {
-        font-size: 4rem;
-    }
 
     .sticky_nav {
         padding-left: 8%;
@@ -601,6 +629,10 @@ select {
         flex-direction: column;
         height: fit-content;
         background-color: #201512;
+    }
+
+    .responsive > li {
+        height: 50px;
     }
 
     li > a {

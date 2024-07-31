@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Minna Ahonen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="Satu_tyyli.css" rel="stylesheet" type="text/css">
+        <link href="Satu_style.css" rel="stylesheet" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
@@ -15,15 +15,15 @@
     <body>
         <a class="screenreader" href="#maincontent">Skip to main content</a>
         <header class="sticky_nav">
-            <h1 class="small_logo" aria-disabled="true" aria-expanded="false" class="disabled_link">Satu</h1>
+            <p><a href="#" class="small_logo" aria-disabled="true" id="disabled_logo">Satu</a></p>
             <nav aria-labelledby="navheader" id="nav">
                 <h2 id="navheader" class="visually_hidden">Navigation</h2>
-                <button id="menu_button" aria-haspopup="menu" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
+                <button id="menu_button" aria-haspopup="menu" aria-expanded="false" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
                     <span class="visually_hidden">Menu</span>
                     <i aria-hidden="true" class="fa fa-bars"></i>
                 </button>
                 <ul class="nav_main" id="nav_main">
-                    <li><a href="index.html" aria-current="page" aria-disabled="true" tabindex="-1" class="disabled_link">Home</a></li>
+                    <li><a href="index.html" aria-current="page" aria-disabled="true" tabindex="-1" id="disabled_link">Home</a></li>
                     <li><a id="focus" href="about.html" tabindex="0">About us</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="events.html">Events</a></li>
@@ -34,7 +34,7 @@
             <div class="left_wrapper">
                 <header class="left_content">
                     <h1 class="logo">Satu</h1>
-                    <p id="main_page_title">Bookstore and cafe</p>
+                    <p id="main_page_title" role="doc-subtitle">Bookstore and cafe</p>
                     <p>Satu is a reader's haven in the middle of Helsinki. Here you can enjoy delicious treats as you browse our collection. You might even find new bookish friends through our events. Welcome!</p>
                 <header>
             </div>
@@ -48,7 +48,7 @@
                         </section>
                         <section>
                             <h2 class="secondary_header">Cafe special offers</h2>
-                            <p>Blueberry muffin and cappuccino 5.50 euros</p>
+                            <p>Blueberry muffin and cappuccino 5.50 €</p>
                             <p>August special: spicy pumpkin cake</p>
                         </section>
                         <section class="tapahtumat_flex">
@@ -58,18 +58,18 @@
                                     <p>July 22 - August 12</p>
                                     <h3>Customer survey</h3>
                                 </header>
-                                <p>To prepare for our 5th anniversary, we will be conducting a customer survey. Three of the participants will win a 50-euro gift card to Satu. Fill out the survey <a href="surveyForm.html">here.</a></p>
+                                <p>We will conduct a customer survey to prepare for our 5th anniversary. Three of the participants will win a 50-euro gift card to Satu. Fill out the survey <a href="surveyForm.html">here.</a></p>
                             </section>
                             <section>
                                 <header class="content_header">
-                                    <p><time datetime="2024-10-10 18:00">Tuesday 10.09. 6 p.m.</time></p>
+                                    <p><time datetime="2024-10-10 18:00">October 10th at 6 p.m.</time></p>
                                     <h3>Finnish classics -bookclub</h3>
                                 </header>
-                                <p>Finnish classics -bookclub returns this autumn to discuss Aleksis Kivi's foundational novel Seven brothers.</p>
+                                <p>Finnish classics -bookclub returns this autumn to discuss Aleksis Kivi's foundational novel Seven Brothers.</p>
                             </section>
                             <section>
                                 <header class="content_header">
-                                    <p><time datetime="2024-11-02 17:00">Wednesday 02.10. 5 p.m.</time></p>
+                                    <p><time datetime="2024-11-02 17:00">November 2nd at 5 p.m.</time></p>
                                     <h3>Meet the Author: Iida Turpeinen</h3>
                                 </header>
                                 <p>In October we invite you to follow an interview with author Iida Turpeinen. Last year she made waves with her debut novel Elolliset (2023). There will be questions and answers, as well as an open discussion on topics such as natural history and the extinction of species.</p>
@@ -100,6 +100,10 @@
                         <h3>Open</h3>
                         <p>Monday to Friday 10 - 17</p>
                         <p>Saturday 10 - 15</p>
+                    </section>
+                    <section>
+                        <h3>Company</h3>
+                        <a href="accessibility-statement_2024-06-31.html">Accessibility statement</a>
                     </section>
                 </div>
         </footer>

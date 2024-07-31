@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Minna Ahonen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="Satu_tyyli.css" rel="stylesheet" type="text/css">
+        <link href="Satu_style.css" rel="stylesheet" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
     <body>
         <a class="screenreader" href="#maincontent">Skip to main content</a>
         <header class="sticky_nav">
-            <h1 class="small_logo" aria-disabled="true" aria-expanded="false" class="disabled_link">Satu</h1>
+            <p><a href="index.html" class="small_logo">Satu</a></p>
             <nav aria-labelledby="navheader" id="nav">
                 <h2 id="navheader" class="visually_hidden">Navigation</h2>
-                <button id="menu_button" aria-haspopup="menu" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
+                <button id="menu_button" aria-haspopup="menu" aria-expanded="false" aria-controls="nav" href="javascript:void(0);" class="menu_icon" onclick="menuToggle()">
                     <span class="visually_hidden">Menu</span>
                     <i aria-hidden="true" class="fa fa-bars"></i>
                 </button>
@@ -32,19 +32,17 @@
         </header>
         <main class="flex_container" id="maincontent">
             <div class="alt_left">
-                <div class="alt_left_content">
-                    <header class="main_header">
-                        <h1 class="page_header">Survey</h1>
-                        <date>10 - 31 July, 2024</date>
-                    </header>
-                    <p>To prepare for our 5th anniversary, we will be conducting a customer survey. Three of the participants will win a 50-euro gift card to Satu. Help us plan a better celebration with our community than ever before!</p>
-                </div>
+                <header class="alt_left_content">
+                    <h1 class="page_header">Survey</h1>
+                    <p><date>July 22 - August 12, 2024</date></p>
+                    <p>To prepare for our 5th anniversary, we will be conducting a customer survey. Help us plan a better celebration with our community than ever before!</p>
+                </header>
             </div>
             <div class="alt_right">
                 <div class="alt_right_content">
                     <h2>Fill out the survey and win a gift card to Satu!</h2>
-                    <p>Fill out the form below between July 22 and August 12 for a chance to win a 50 euro gift card. The winners will be drawn on August 13, and will the contacted personally.</p>
-                    <p>By taking part in the contest you agree to its terms and conditions, which can be read <a href="#">here</a>.</p>
+                    <p>Fill out the form below between July 22 and August 12 for a chance to win a 50 euro gift card. Three winners will be drawn on August 13, and they will the contacted personally.</p>
+                    <p>By taking part in the contest you agree to its terms and conditions, which can be read <a href="#">here.</a></p>
                     <p>Required fields are marked with an asterisk *</p>
                     <form aria-labelledby="form_label" name="raffle" id="raffle" method="post" onsubmit="submitSurvey()">
                         <h3 id="form_label">Customer survey</h3>
@@ -60,11 +58,12 @@
                             </div>
                             <div>
                                 <label for="email">Email: *</label>
-                                <input type="email" id="email" name="email" required="true">
+                                <input type="email" id="email" name="email" required="true" aria-describedby="email_desc">
+                                <span id="email_desc">jane@example.com</span>
                             </div>
                         </fieldset>
                         <fieldset id="genres" aria-labelledby="genre_label">
-                            <legend>Favourite genre:</legend>
+                            <legend>Favourite genres:</legend>
                             <label id="genre_label" for="genres">You can choose multiple favourite genres.</label>
                             <div>
                                 <input type="checkbox" id="fantasy" name="fantasy" value="Fantasy">
@@ -97,7 +96,7 @@
                             </select>
                         </section>
                         <section>
-                            <input aria-selected="false" type="checkbox" id="consent" name="consent" required="true">
+                            <input aria-checked="false" type="checkbox" id="consent" name="consent" required="true">
                             <label for="consent">I have read and understood the terms and conditions *</label>
                         </section>
                         <button id="submit" type="submit">Submit</button>
@@ -128,6 +127,11 @@
                         <p>Monday to Friday 10 - 17</p>
                         <p>Saturday 10 - 15</p>
                     </section>
+                    <section>
+                        <h3>Company</h3>
+                        <a href="accessibility-statement_2024-06-31.html">Accessibility statement</a>
+                    </section>
+                </div>
                 </div>
         </footer>
     </body>
